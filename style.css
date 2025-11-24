@@ -1,0 +1,606 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans+Code:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans+Code:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+body{
+    min-width: 90vw;
+    min-height: 100vh;
+    color: white;
+    background: rgb(1, 1, 73);
+    transition: background 1.5s ease, background-position 2s ease;
+    background-size: 200% 200%;
+    position: relative; /* para que el ::before se posicione correctamente */
+    z-index: 0;
+}
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.35); /* filtro oscuro */
+    backdrop-filter: blur(4px);            /* desenfoque suave */
+    z-index: -1;                           /* queda detrás del contenido */
+  }
+body, p{
+    font-family: Roboto;
+}
+/* tamaño de letra */
+p{
+    font-size: 1.8rem;
+}
+h2, h3{
+    font-family: Poppins;
+    font-size: 2rem;
+}
+h1{
+    font-size: 3rem;
+}
+main{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    margin-top: 3rem;
+}
+
+/*navegacion*/
+nav{
+    background-color:transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 5rem;
+}
+nav button,img{
+    background: transparent;
+    border: none;
+}
+nav img{
+    width: 6rem;
+}
+nav button.clicked{
+    transform: scale(0.9);
+    transition: transform 0.1s ease;
+}
+
+ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    list-style: none;
+}
+
+.top {
+    display: inline-block;
+    color:rgb(255, 254, 254);
+    text-decoration: none;
+    margin: 1rem;
+    padding: 1rem 1rem;
+    font-size: 2.5rem; 
+    background:transparent;
+    border-radius: 5px;
+    box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.469);
+    transition: 0.5s;
+}
+
+.top:hover {
+    display: inline-block;
+    font-weight: 800;
+    color:white;
+    text-decoration: none;
+    margin: 1rem;
+    padding: 1rem 1rem;
+    font-size: 1.5rem; 
+    background-color: black;
+    box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.469);
+    border-radius: 5px;
+    transition: 1s;
+    transform: translateY(-5px)
+}
+/*shortPresentation*/
+.shortpresent{
+    display:flex;
+    align-items: center;
+    gap: 100px;
+    margin: 2rem;
+    margin-top: 10rem;
+    padding: 2rem 2rem;
+    border-style: solid;
+    border-color: blue;
+    background:transparent;
+    border-radius: 10px;
+    box-shadow: inset 0px 0px 16px blue;
+    width: 70%;
+    transition: 1.5s;
+}
+.shortpresent:hover{
+    border-color: rgb(0, 123, 255);
+    box-shadow: 0px 0px 50px rgb(13, 5, 241);
+    background: linear-gradient(120deg,rgba(11, 11, 142, 0.797), rgb(0, 0, 0));
+    transition:1s;
+    width: 75%;
+    transform: translateY(-10px)
+}
+.shortpresent *{
+    padding-bottom: 0.5rem;
+}
+.imgContent {
+    flex: 1;             /* La imagen ocupará el espacio disponible */
+}
+
+.shortpresent img {
+    width: 70%;         /* Ocupa todo el ancho del div padre */
+    height: auto;        /* Mantiene la proporción */
+    border-radius: 5rem;
+}
+.about h2{
+text-align: center;
+}
+.bloq{
+    align-items: center;
+    gap: 100px;
+    margin: 2rem;
+    margin-top: 10rem;
+    padding: 2rem 2rem;
+    border: 2px solid;
+    border-color: blue;
+    background:transparent;
+    border-radius: 10px;
+    box-shadow: 0px 8px 16px black, inset 0px 0px 16px blue;
+    width: 70%;
+    transition: border-color 0.8s ease, box-shadow 0.8s ease, transform 0.8s ease;
+}
+
+.bloq:hover{
+    border-color: rgb(0, 123, 255);
+    box-shadow: 0px 0px 50px rgb(13, 5, 241);
+    background: linear-gradient(100deg,rgba(11, 11, 142, 0.01), rgba(0, 0, 0, 0.989));
+    transition:  0.8s;
+    width: 75%;
+    transform: translateY(-10px);
+}
+
+.habilidades{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 2rem 1rem;
+    margin: 2rem;
+    margin-top: 10rem;
+    background-color: rgb(8, 2, 61);
+    width: 70%;   
+    border: 2px solid;
+    border-color: blue;
+    background:transparent;
+    border-radius: 10px;
+    box-shadow: 0px 8px 16px black, inset 0px 0px 16px blue;         
+}
+.habilidades h2{
+    padding-top: 1rem;
+    font-size: 3rem;
+}
+
+.hab{
+    margin:1rem;
+    margin: 2rem;
+}
+.hab img{
+    width: 25rem;
+    height: auto;
+    transition: 1s;
+    border-radius: 2rem;
+}
+.hab img:hover{
+    width: 26rem;
+    transition:1s;
+    border-radius: 2rem;
+}
+.contentHab1{
+    display: flex;
+    margin:0;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+}
+.contentHab1 button{
+    width: 5rem;
+    height: 5rem;
+    background:transparent;
+    border: none;
+    padding: 1rem;
+    transition: transform 0.1s ease;
+}
+.contentHab1 button.clicked {
+    transform: scale(0.9);
+}
+.contentHab1 button img{
+    width: 3rem;
+}
+.contentHab2{
+    display: flex;
+    overflow-x: scroll;
+    flex-wrap: nowrap;
+    align-items: center;
+    text-align: center;
+    scrollbar-width: none;
+}
+.contentHab2::-webkit-scrollbar{
+    display: none;
+}
+
+/*proyectos*/
+.content-proyect-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin:0;
+    background: transparent;
+}
+.content-proyect-button button{
+    width: 5rem;
+    height: 5rem;
+    background:transparent;
+    border: none;
+    padding: 1rem;
+    transition: transform 0.1s ease;
+}
+.content-proyect-button button.clicked{
+    transform: scale(0.9);
+}
+.content-proyect-button button img{
+    width: 3rem;
+}
+.contentProyect{
+display: flex;
+width: 100%;
+height: 100%;
+overflow:scroll;
+scrollbar-width: none;
+flex-wrap: nowrap;
+align-items: center;
+text-align: center;
+}
+.contentProyect::-webkit-scrollbar{
+    display: none;
+}
+.proyectos{
+    width: 25rem;
+    height: auto;
+    transition: 1s;
+    border-radius: 2rem;
+    font-size: 3rem;
+    margin: 1.5rem;
+    box-shadow: 0px 8px 8px black;
+    padding: 1.5rem;
+}
+.proyectos img{
+    width: 20rem;
+    height:auto;
+    border-radius: 2rem;
+    box-shadow: 0px 0px 4px white;
+}
+.proyectos a{
+    color: white;
+
+}
+
+/*contacto*/
+.contacto{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem 1rem;
+    margin: 2rem;
+    margin-top: 10rem;
+    background-color: rgb(8, 2, 61);
+    width: 50%;
+    height: 50rem;  
+    border: 2px solid;
+    border-color: blue;
+    background:transparent;
+    border-radius: 10px;
+    box-shadow: 0px 8px 16px black, inset 0px 0px 16px blue;
+    overflow: none;
+}
+
+.contacto h2 {
+    font-size: 3rem;
+}
+.contacto form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    height: 100%;  
+}
+.contact-data{
+    width: auto;
+    height: 25rem;
+    display: flex;
+    flex-direction: column;
+    align-items:  center;
+    justify-content: center;
+}
+.contact-data input{
+    font-size: 2rem;
+    margin: 1rem;
+    width: 100%;              /* Se ajustan correctamente al tamaño del contenedor */       
+    padding: 1.5rem;          /* Separación del placeholder y texto */
+    height: auto;             /* Ya no obliga a todos los inputs a ser gigantes */
+    border-radius: 5px;
+    background-color: rgba(73, 64, 64, 0.418);
+    border: 2px solid blue;
+    color: white;
+    text-align: left;         /* Alinea placeholder y texto al inicio */
+}
+.contact-data input::placeholder{
+    color: rgb(179, 168, 168);
+    text-align: left;
+    font-style: roboto;
+}
+#mensaje{
+    min-height: 15rem;
+    height: auto;
+    width: 100%;
+    font-size: 2rem;
+    border-color: blue;
+    background-color: rgba(73, 64, 64, 0.418);
+    border-radius: 5px;
+}
+#mensaje::placeholder{
+    color: rgb(179, 168, 168);
+    padding: 1rem;
+    font-style: Roboto;
+}
+.contact-data .submit{
+    width: 10rem;
+    text-align: center;
+}
+footer{
+    box-shadow: 0px 8px 16px black;
+    width: 50%;
+    height: 8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5rem;
+    border-radius: 5px;
+}
+footer p{
+    margin: 1rem;
+}
+/* --------------------------- */
+/* 📱 MOBILE FIRST – 480px ↓  */
+/* --------------------------- */
+@media (max-width: 480px) {
+
+    body {
+        font-size: 50%;
+    }
+    nav{
+        margin-bottom: 3rem;
+    }
+    nav ul {
+        flex-wrap: wrap;
+        gap: 0.5rem;
+    }
+
+    .top {
+        font-size: 1.8rem;
+        padding: 0.5rem 1rem;
+        margin: 0.3rem;
+    }
+
+    .shortpresent {
+        flex-direction: column;
+        gap: 2rem;
+        width: 95%;
+        text-align: center;
+    }
+
+    .shortpresent img {
+        width: 60%;
+    }
+
+    .bloq {
+        width: 95%;
+        padding: 1.5rem;
+        margin-top: 5rem;
+    }
+
+    .habilidades {
+        width: 95%;
+    }
+
+    .contentHab1 button img,
+    .content-proyect-button button img {
+        width: 2.5rem;
+    }
+
+    .hab img {
+        width: 15rem;
+    }
+
+    .proyectos {
+        width: 22rem;
+    }
+
+    .proyectos img {
+        width: 17rem;
+    }
+
+    /* contacto */
+    .contacto {
+        width: 90%;
+        height: auto;
+        padding-bottom: 3rem;
+    }
+
+    .contact-data {
+        width: 100%;
+        height: auto;
+    }
+
+    #mensaje {
+        min-height: 12rem;
+    }
+
+    footer {
+        width: 90%;
+        height: auto;
+        padding: 2rem;
+        text-align: center;
+    }
+
+}
+
+/* --------------------------- */
+/* 📱 CELULARES GRANDES – 481px–768px */
+/* --------------------------- */
+@media (min-width: 481px) and (max-width: 768px) {
+
+    nav ul {
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+    .top {
+        font-size: 2.2rem;
+        margin: 0.5rem;
+    }
+
+    .shortpresent {
+        flex-direction: column;
+        width: 85%;
+        gap: 3rem;
+        text-align: center;
+    }
+
+    .shortpresent img {
+        width: 55%;
+    }
+
+    .bloq,
+    .habilidades {
+        width: 85%;
+    }
+
+    .hab img {
+        width: 18rem;
+    }
+
+    .proyectos img {
+        width: 19rem;
+    }
+
+    .contacto {
+        width: 70%;
+        height: auto;
+    }
+
+    footer {
+        width: 70%;
+    }
+}
+
+/* --------------------------- */
+/* 📟 TABLETS – 769px–1024px */
+/* --------------------------- */
+@media (min-width: 769px) and (max-width: 1024px) {
+
+    nav ul {
+        gap: 1rem;
+    }
+
+    .top {
+        font-size: 2.4rem;
+    }
+
+    .shortpresent {
+        gap: 5rem;
+        width: 80%;
+    }
+
+    .shortpresent img {
+        width: 50%;
+    }
+
+    .bloq,
+    .habilidades {
+        width: 80%;
+    }
+
+    .contacto {
+        width: 60%;
+    }
+
+    footer {
+        width: 60%;
+    }
+}
+
+/* ------------------------------------- */
+/* 💻 LAPTOP / DESKTOP PEQUEÑO 1025–1280 */
+/* ------------------------------------- */
+@media (min-width: 1025px) and (max-width: 1280px) {
+
+    .shortpresent {
+        width: 75%;
+    }
+
+    .bloq,
+    .habilidades {
+        width: 75%;
+    }
+
+    .contacto {
+        width: 55%;
+    }
+
+    footer {
+        width: 55%;
+    }
+}
+
+/* --------------------------- */
+/* 🖥️ DESKTOP GRANDE +1281px */
+/* --------------------------- */
+@media (min-width: 1281px) {
+
+    .shortpresent {
+        width: 70%;
+    }
+
+    .bloq,
+    .habilidades {
+        width: 70%;
+    }
+
+    .contacto {
+        width: 50%;
+    }
+
+    footer {
+        width: 50%;
+    }
+}
