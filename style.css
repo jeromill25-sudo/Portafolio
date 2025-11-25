@@ -620,3 +620,6 @@ html, body {
     overflow-x: hidden;
     min-height: 100dvh; /* corrige en celulares */
 }
+html, body {
+    padding-bottom: env(safe-area-inset-bottom);
+}
