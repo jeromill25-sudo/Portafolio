@@ -12,7 +12,8 @@
     font-size: 62.5%;
 }
 body{
-    min-width: 90vw;
+    min-width: unset;
+    width: 100%;
     min-height: 100vh;
     color: white;
     background: rgb(1, 1, 73);
@@ -31,7 +32,12 @@ body::before {
     background-color: rgba(0, 0, 0, 0.35); /* filtro oscuro */
     backdrop-filter: blur(4px);            /* desenfoque suave */
     z-index: -1;                           /* queda detrás del contenido */
-  }
+}
+body::after {
+    content: "";
+    display: block;
+    height: 0px !important;
+}
 body, p{
     font-family: Roboto;
 }
@@ -384,7 +390,8 @@ footer{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 5rem;
+    margin:0;
+    padding: 1.5rem;
     border-radius: 5px;
 }
 footer p{
