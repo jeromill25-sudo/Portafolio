@@ -393,6 +393,8 @@ footer{
     margin:0;
     padding: 1.5rem;
     border-radius: 5px;
+    position: relative;
+    bottom: env(safe-area-inset-bottom, 0px);
 }
 footer p{
     margin: 1rem;
