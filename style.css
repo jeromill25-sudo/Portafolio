@@ -366,6 +366,7 @@ text-align: center;
     border-color: blue;
     background-color: rgba(73, 64, 64, 0.418);
     border-radius: 5px;
+    color: white;
 }
 #mensaje::placeholder{
     color: rgb(179, 168, 168);
