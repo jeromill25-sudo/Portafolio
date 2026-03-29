@@ -1,0 +1,221 @@
+/* CONTENEDOR GENERAL */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    background: #0f172a;
+    font-family: 'Courier New', Courier, monospace;
+}
+.home {
+    min-height: 100vh;
+    padding: 2rem;
+    padding-bottom: 3rem;
+    background: #0f172a;
+    color: #e2e8f0;
+    margin-left: 10rem;
+}
+
+/* HERO */
+.home-container {
+    width: 60rem;
+    margin: 0 auto;
+    padding: 2.5rem;
+    display: flex;
+    align-items: center;
+
+}
+.home-2container{
+    margin: 0;
+    padding: 0;
+    width: 60%;
+}
+
+/* LADO derecho */
+
+.home-rigth {
+    display: flex;
+    align-items: center;
+}
+.home-rigth .professions,p{
+    padding-top: 1rem;
+}
+/* NOMBRE */
+.home-rigth h1 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    border-bottom: solid;
+    width: 55%;
+}
+
+/* PROFESIONES */
+.professions {
+    display: flex;
+    overflow: hidden;
+    width: 50%;
+    position: relative;
+    mask-image: linear-gradient(
+        to right,
+        transparent,
+        black 10%,
+        black 90%,
+        transparent);
+        
+    -webkit-mask-image: linear-gradient(
+        to right,
+        transparent,
+        black 10%,
+        black 90%,
+        transparent);
+    cursor: grab;
+    height: 3.5rem;
+}
+
+.professions span {
+    padding: 0.3rem 0.8rem;
+    background: #6365f164;
+    border-radius: 1rem;
+    white-space: nowrap;
+    transition: 1s ease-in;
+    box-shadow: 2px 2px 7px 3px rgba(89, 6, 244, 0.711);
+    height: 2rem;
+}
+
+span:hover{
+    font-size: 0.9rem;
+    transition: 1s ease-out;
+    box-shadow: 2px 2px 7px 3px rgba(89, 6, 244, 0);
+}
+.professions-track {
+    display: flex;
+    gap: 1rem;
+    width: max-content;
+
+    animation: scroll 15s linear infinite;
+}
+
+/* DESCRIPCIÓN */
+.home-rigth p {
+    font-size: 1.5rem;
+    color: #cbd5f5;
+}
+
+/* FOTO */
+.photo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.photo img {
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+    object-fit: cover;
+    transition: 1s ease-in;
+}
+.photo img:hover {
+    width: 12rem;
+    height: 12rem;
+    transition: 1s ease-out;
+    box-shadow: 0 0.5rem 2rem rgba(64, 4, 166, 0.871);
+}
+
+/* BOTON CV */
+.cv-download {
+    max-width: 60rem;
+    margin: 1rem auto 0 auto;
+    padding: 0 2rem;
+    text-align: center;
+}
+
+.cv-link {
+    text-decoration: none;
+}
+
+.cv-button {
+    padding: 0.75rem 1.4rem;
+    font-size: 2rem;
+    font-weight: 700;
+    font-family: 'Courier New', Courier, monospace;
+    color: #e2e8f0;
+    background: linear-gradient(135deg, rgba(38, 39, 90, 0), rgba(30, 41, 59, 0.95));
+    border: 0.1rem solid rgba(255, 255, 255, 0.2);
+    border-radius: 0.8rem;
+    cursor: pointer;
+    backdrop-filter: blur(8px);
+    box-shadow: 0 0.5rem 1.6rem rgba(64, 4, 166, 0.45);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease, font-size 0.3s ease;
+}
+
+.cv-button:hover {
+    transform: translateY(-0.2rem);
+    background: linear-gradient(135deg, #6365f183, #4438cab4);
+    box-shadow: 0 0.7rem 1.8rem rgba(89, 6, 244, 0.6);
+    font-size: 1.8rem;
+}
+
+/* ABOUT */
+.about {
+    max-width: 60rem;
+    margin: 3rem auto 0 auto;
+    padding: 2rem;
+    margin-top: 9rem;
+    border-radius: 2rem;
+    text-align: center;
+}
+
+.about h2{
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    transition: 0.6s ease-in;
+    border-bottom: solid;
+}
+
+.about p {
+    margin-top: 3rem;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #cbd5f5;
+}
+
+/* FOOTER */
+.home-footer {
+    max-width: 60rem;
+    margin: 4rem auto 0 auto;
+    padding: 1.5rem 2rem;
+    text-align: center;
+    border-top: 0.1rem solid rgba(255, 255, 255, 0.1);
+    border-radius: 0 0 1rem 1rem;
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(8px);
+    box-shadow: 0 -0.25rem 1.5rem rgba(0, 0, 0, 0.2);
+}
+
+.home-footer-text {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+    color: #cbd5f5;
+    letter-spacing: 0.02em;
+    line-height: 1.6;
+}
+
+.home-footer-sep {
+    display: inline-block;
+    margin: 0 0.75rem;
+    color: #6366f1;
+    opacity: 0.85;
+}
+
+@keyframes scroll {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}

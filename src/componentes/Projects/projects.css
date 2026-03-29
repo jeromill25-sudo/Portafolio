@@ -1,0 +1,24 @@
+.proyects-container {
+    max-width: 60rem;
+    margin: 3rem auto;
+    margin-top: 9rem;
+    padding: 2rem;
+
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+  /* TITULO */
+.proyects-container .titulo {
+    text-align: center;
+    font-size: 2rem;
+    border-bottom: solid;
+}
+
+  /* GRID DE TARJETAS 🔥 */
+.proyects-container .proyects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+    gap: 1.5rem;
+}

@@ -1,0 +1,66 @@
+/* Misma posición: panel bajo el nav (ancho lo defines aquí) */
+.contact-sidebar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 18rem;
+  box-sizing: border-box;
+  padding: 1.5rem 1rem;
+}
+
+/* Estilo igual al botón de descarga CV (.cv-button en home.css) */
+.contact-mail-link {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.6rem;
+  width: 100%;
+  max-width: 100%;
+  min-height: auto;
+  padding: 0.75rem 1.4rem;
+  box-sizing: border-box;
+  margin: 0;
+  text-decoration: none;
+  color: #e2e8f0;
+  font-size: 1rem;
+  font-weight: 700;
+  font-family: 'Courier New', Courier, monospace;
+  background: linear-gradient(135deg, rgba(38, 39, 90, 0), rgba(30, 41, 59, 0.95));
+  border: 0.1rem solid rgba(255, 255, 255, 0.2);
+  border-radius: 0.8rem;
+  cursor: pointer;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 0.5rem 1.6rem rgba(64, 4, 166, 0.45);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    background 0.3s ease,
+    font-size 0.3s ease;
+  overflow-wrap: anywhere;
+  word-break: normal;
+  line-height: 1.25;
+}
+
+.contact-mail-link:hover {
+  transform: translateY(-0.2rem);
+  background: linear-gradient(135deg, #6365f183, #4438cab4);
+  box-shadow: 0 0.7rem 1.8rem rgba(89, 6, 244, 0.6);
+  /* Misma idea que .cv-button:hover (texto un poco más pequeño) */
+  font-size: 0.9rem;
+}
+
+.contact-mail-link:active {
+  transform: translateY(-0.1rem);
+}
+
+.contact-mail-icon {
+  flex-shrink: 0;
+  width: 1.35rem;
+  height: 1.35rem;
+  color: inherit;
+}
+
+.contact-mail-text {
+  flex: 1 1 auto;
+  min-width: 0;
+}
