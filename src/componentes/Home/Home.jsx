@@ -4,7 +4,7 @@ import Projects from '../Projects/Projects';
 const professions = ["Web Developer", "Problem Solver", "Creator"];
 import Skills from '../Skills/Skills';
 import Pet from '../Pet/Pet';
-import profileImg from '../../assets/profile.jpeg';
+import profileImg from '../../../public/profile.jpeg';
 
 const Home = () => {
     return (
