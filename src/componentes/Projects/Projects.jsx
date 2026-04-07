@@ -3,25 +3,25 @@ import ProjectCard from '../ProjectCard/ProjectCard';
 
 const projects = [
   {
-    img: 'public/todolist.png',
+    img: '/todolist.png',
     tittle: 'To-do List',
     description: 'Es una aplicación web de tareas en React con Tailwind CSS y Lucide. ',
     link: 'https://to-do-list-6cvuujznz-jeromill25-6313s-projects.vercel.app/',
   },
   {
-    img: 'public/profile.jpeg', 
+    img: '/profile.jpeg', 
     tittle: 'To-do List',
     description: 'es la vregaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa',
     link: 'https://github.com',
   },
   {
-    img: 'public/hero.png',
+    img: '/hero.png',
     tittle: 'To-do List',
     description: 'es la vregaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa',
     link: 'https://react.dev',
   },
   {
-    img: 'public/vite.png',
+    img: '/vite.svg',
     tittle: 'To-do List',
     description: 'es la vregaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa',
     link: 'https://vitejs.dev',
