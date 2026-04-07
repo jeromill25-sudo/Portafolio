@@ -1,27 +1,30 @@
 import './projects.css';
-import ProjectCard from '../ProjectCard/ProjectCard';
+import ToDoList from '../../assets/todolist.png';
+import Profile from '../../assets/profile.jpeg';
+import Hero from '../../assets/hero.png';
+import Vite from '../../assets/vite.png';
 
 const projects = [
   {
-    img: 'src/assets/image.png',
+    img: ToDoList,
     tittle: 'To-do List',
     description: 'Es una aplicación web de tareas en React con Tailwind CSS y Lucide. ',
-    link: 'https://github.com',
+    link: 'https://to-do-list-6cvuujznz-jeromill25-6313s-projects.vercel.app/',
   },
   {
-    img: 'src/assets/profile.jpeg',
+    img: Profile,
     tittle: 'To-do List',
     description: 'es la vregaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa',
     link: 'https://github.com',
   },
   {
-    img: 'src/assets/hero.png',
+    img: Hero,
     tittle: 'To-do List',
     description: 'es la vregaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa',
     link: 'https://react.dev',
   },
   {
-    img: 'src/assets/hero.png',
+    img: Vite,
     tittle: 'To-do List',
     description: 'es la vregaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa',
     link: 'https://vitejs.dev',
