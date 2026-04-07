@@ -1,8 +1,8 @@
 import './projects.css';
-import ToDoList from '../../assets/todolist.png';
-import Profile from '../../assets/profile.jpeg';
-import Hero from '../../assets/hero.png';
-import Vite from '../../assets/vite.png';
+import ToDoList from '../../../public/todolist.png';
+import Profile from '../../../public/profile.jpeg';
+import Hero from '../../../public/hero.png';
+import Vite from '../../../public/vite.png';
 
 const projects = [
   {
