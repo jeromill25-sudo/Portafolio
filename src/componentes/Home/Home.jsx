@@ -4,7 +4,7 @@ import Projects from '../Projects/Projects';
 const professions = ["Web Developer", "Problem Solver", "Creator"];
 import Skills from '../Skills/Skills';
 import Pet from '../Pet/Pet';
-import profileImg from '../../../public/profile.jpeg';
+
 
 const Home = () => {
     return (
@@ -28,7 +28,7 @@ const Home = () => {
                     
 
                     <div className='photo'>
-                        <img src={profileImg} alt="Profile" />
+                        <img src={'public/profile.jpeg'} alt="Profile" />
                     </div>
                 </div>
             </div>
