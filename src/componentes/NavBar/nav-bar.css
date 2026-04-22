@@ -1,8 +1,8 @@
 /* ─────────────────────────────────────────────────────────────────
-   SIDEBAR — Desktop first, collapses to bottom nav on mobile
+   SIDEBAR — Desktop first, colapsa a una barra inferior en móvil
 ───────────────────────────────────────────────────────────────── */
 
-/* ── Desktop: fixed left sidebar ─────────────────────────────── */
+/* ── Desktop: Barra lateral fija a la izquierda ───────────────── */
 .sidebar-aside {
   position: fixed;
   top: 0;
@@ -29,7 +29,7 @@
     4px 0 24px rgba(0, 0, 0, 0.35);
 }
 
-/* ── Brand monogram ──────────────────────────────────────────── */
+/* ── Monograma / Marca (JR) ──────────────────────────────────── */
 .sidebar-brand {
   display: flex;
   align-items: center;
@@ -55,7 +55,7 @@
   letter-spacing: 0.1em;
 }
 
-/* ── Nav container ───────────────────────────────────────────── */
+/* ── Contenedor de Navegación ────────────────────────────────── */
 .nav-container {
   display: flex;
   flex-direction: column;
@@ -63,7 +63,7 @@
   flex: 1;
 }
 
-/* ── Nav links ───────────────────────────────────────────────── */
+/* ── Enlaces de Navegación ───────────────────────────────────── */
 .nav-link {
   display: flex;
   align-items: center;
@@ -121,7 +121,7 @@
   font-weight: 600;
 }
 
-/* ── Separator above Contact ─────────────────────────────────── */
+/* ── Separador y Correo al pie de la Sidebar ─────────────────── */
 .sidebar-aside > .contact-sidebar {
   margin-top: auto;
   border-top: 1px solid var(--border-subtle);

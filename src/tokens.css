@@ -1,33 +1,40 @@
+/* ─── Fuentes ────────────────────────────────────────────────────── */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap');
 
-/* ─── Design Tokens ──────────────────────────────────────────────── */
+/**
+ * Design Tokens
+ * Sistema de variables globales que define la estética de todo el sitio.
+ * Centralizar estos valores permite cambios rápidos de tema y coherencia visual.
+ */
 :root {
-  /* Layout */
-  --sidebar-width:      15rem;
-  --scrollbar-width:    2.5rem;
-  --content-max-width:  58rem;
+  /* Dimensiones de Layout */
+  --sidebar-width:      15rem;      /* Ancho de la barra lateral en desktop */
+  --scrollbar-width:    2.5rem;      /* Margen para la barra de progreso vertical */
+  --content-max-width:  58rem;      /* Ancho máximo del contenido central */
 
-  /* Colors */
-  --bg-base:            #0f172a;
-  --bg-surface:         rgba(255, 255, 255, 0.04);
-  --bg-surface-hover:   rgba(255, 255, 255, 0.08);
-  --border-subtle:      rgba(255, 255, 255, 0.08);
-  --border-focus:       rgba(99, 102, 241, 0.6);
+  /* Paleta de Colores (Basada en Slate y Indigo de Tailwind) */
+  --bg-base:            #0f172a;    /* Fondo principal oscuro */
+  --bg-surface:         rgba(255, 255, 255, 0.04); /* Superficie sutil para tarjetas */
+  --bg-surface-hover:   rgba(255, 255, 255, 0.08); /* Estado hover para superficies */
+  --border-subtle:      rgba(255, 255, 255, 0.08); /* Bordes poco intrusivos */
+  --border-focus:       rgba(99, 102, 241, 0.6);   /* Color de foco/acento en bordes */
 
-  --accent:             #6366f1;
-  --accent-light:       #818cf8;
-  --accent-glow:        rgba(99, 102, 241, 0.35);
-  --accent-glow-strong: rgba(89, 6, 244, 0.65);
+  /* Colores de Acento y Brillo (Glows) */
+  --accent:             #6366f1;    /* Color principal de la marca (Indigo) */
+  --accent-light:       #818cf8;    /* Versión más clara del acento */
+  --accent-glow:        rgba(99, 102, 241, 0.35);    /* Brillo suave */
+  --accent-glow-strong: rgba(89, 6, 244, 0.65);      /* Brillo intenso para efectos hover */
 
-  --text-primary:       #e2e8f0;
-  --text-secondary:     #cbd5e1;
-  --text-muted:         #94a3b8;
+  /* Tipografía - Jerarquía de texto */
+  --text-primary:       #e2e8f0;    /* Títulos y texto importante */
+  --text-secondary:     #cbd5e1;    /* Párrafos y descripciones */
+  --text-muted:         #94a3b8;    /* Texto de menor importancia/deshabilitado */
 
-  /* Typography */
-  --font-sans: 'Inter', system-ui, sans-serif;
-  --font-mono: 'JetBrains Mono', 'Courier New', monospace;
+  /* Tipos de Letra */
+  --font-sans: 'Inter', system-ui, sans-serif;                /* Fuente para lectura general */
+  --font-mono: 'JetBrains Mono', 'Courier New', monospace;    /* Fuente para código o estilo técnico */
 
-  /* Spacing */
+  /* Espaciado (Sistema de escala) */
   --space-xs:  0.25rem;
   --space-sm:  0.5rem;
   --space-md:  1rem;
@@ -36,27 +43,27 @@
   --space-2xl: 3rem;
   --space-3xl: 5rem;
 
-  /* Radii */
+  /* Bordes Redondeados */
   --radius-sm:   0.5rem;
   --radius-md:   0.875rem;
   --radius-lg:   1.25rem;
   --radius-xl:   1.75rem;
   --radius-pill: 999px;
 
-  /* Shadows */
+  /* Sombras y Elevación */
   --shadow-sm:     0 0.25rem 0.75rem rgba(0, 0, 0, 0.25);
   --shadow-md:     0 0.5rem 1.5rem rgba(0, 0, 0, 0.35);
   --shadow-accent: 0 0.5rem 1.8rem var(--accent-glow-strong);
 
-  /* Transitions */
+  /* Tiempos de Transición */
   --transition-fast: 0.2s ease;
   --transition-base: 0.35s ease;
 
-  /* Mobile bottom nav height */
+  /* Altura del NavBar en móviles */
   --mobile-nav-h: 4rem;
 }
 
-/* ─── Global Reset ───────────────────────────────────────────────── */
+/* ─── Reseteo Global ─────────────────────────────────────────────── */
 *, *::before, *::after {
   box-sizing: border-box;
   padding: 0;
@@ -64,7 +71,7 @@
 }
 
 html {
-  scroll-behavior: smooth;
+  scroll-behavior: smooth; /* Scroll suave para los enlaces del NavBar */
 }
 
 body {
@@ -72,5 +79,5 @@ body {
   color: var(--text-primary);
   font-family: var(--font-sans);
   min-height: 100vh;
-  -webkit-font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased; /* Suavizado de fuente en navegadores basados en WebKit */
 }

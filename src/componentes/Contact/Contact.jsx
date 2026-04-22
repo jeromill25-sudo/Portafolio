@@ -14,7 +14,7 @@ import { MdEmail } from 'react-icons/md';
 const Contact = () => {
   return (
     // Contenedor del pill; el id="contact" permite un posible enlace directo
-    <div className="contact-sidebar" id="contact">
+    <div className="contact-sidebar">
       <a
         className="contact-mail-link"
         href="mailto:mrds10@hotmail.com"       // Abre el cliente de correo del usuario

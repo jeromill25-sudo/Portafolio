@@ -1,28 +1,37 @@
 /* ═══════════════════════════════════════════════════════════════
    HOME — Mobile First Layout
-   Mobile  : full width, padding-bottom for bottom nav
-   Desktop : offset left by sidebar-width
-═══════════════════════════════════════════════════════════════ */
+   Estrategia de diseño:
+   - Mobile  : Ancho completo, padding inferior para la barra de navegación.
+   - Desktop : Desplazado a la derecha por el ancho de la sidebar (margin-left).
+   ═══════════════════════════════════════════════════════════════ */
 
-/* ─── Page Wrapper ────────────────────────────────────────────── */
+/* ─── Contenedor Principal de la Página ───────────────────────── */
 .home {
   min-height: 100vh;
   padding: var(--space-xl) var(--space-md);
+  /* Asegura que el contenido no quede tapado por la NavBar móvil */
   padding-bottom: calc(var(--mobile-nav-h) + var(--space-xl));
   background: var(--bg-base);
   color: var(--text-primary);
 }
 
+/* Ajustes para Desktop (Sidebar visible) */
 @media (min-width: 768px) {
   .home {
     margin-left: var(--sidebar-width);
     padding: var(--space-xl) var(--space-xl);
+    /* Espacio extra a la derecha para la barra de progreso de scroll */
     padding-right: calc(var(--scrollbar-width) + 3rem);
     padding-bottom: var(--space-2xl);
   }
+
+  /* El correo de contacto en la sección About solo se muestra en móvil */
+  .about-contact {
+    display: none;
+  }
 }
 
-/* ─── HERO ────────────────────────────────────────────────────── */
+/* ─── HERO: Sección de Bienvenida ────────────────────────────── */
 .home-container {
   max-width: var(--content-max-width);
   margin: 0 auto;
@@ -37,23 +46,23 @@
   min-width: 0;
 }
 
-/* ─── Right side (text + photo) ──────────────────────────────── */
-.home-rigth {
+/* Bloque derecho (Texto + Foto) */
+.home-right {
   display: flex;
   align-items: center;
   gap: var(--space-xl);
   width: 100%;
 }
 
-.home-rigth .professions,
-.home-rigth p {
+.home-right .professions,
+.home-right p {
   padding-top: var(--space-md);
 }
 
-/* ─── Name ────────────────────────────────────────────────────── */
-.home-rigth h1 {
+/* Nombre con subrayado decorativo */
+.home-right h1 {
   font-family: var(--font-sans);
-  font-size: clamp(1.75rem, 5vw, 2.8rem);
+  font-size: clamp(1.75rem, 5vw, 2.8rem); /* Tamaño fluido según el viewport */
   font-weight: 700;
   color: var(--text-primary);
   border-bottom: 1px solid var(--border-subtle);
@@ -62,12 +71,13 @@
   letter-spacing: -0.02em;
 }
 
-/* ─── Professions carousel ────────────────────────────────────── */
+/* Carrusel de Profesiones (Etiquetas animadas) */
 .professions {
   display: flex;
   overflow: hidden;
   width: min(100%, 22rem);
   position: relative;
+  /* Máscara de degradado para suavizar los bordes del carrusel */
   mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
   -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
   cursor: grab;
@@ -95,6 +105,7 @@ span:hover {
   opacity: 0.7;
 }
 
+/* Animación infinita del carrusel */
 .professions-track {
   display: flex;
   gap: 0.75rem;
@@ -102,15 +113,15 @@ span:hover {
   animation: scroll 15s linear infinite;
 }
 
-/* ─── Description ─────────────────────────────────────────────── */
-.home-rigth p {
+/* Frase descriptiva del Hero */
+.home-right p {
   font-family: var(--font-sans);
   font-size: clamp(1rem, 2.5vw, 1.35rem);
   color: var(--text-secondary);
   line-height: 1.5;
 }
 
-/* ─── Profile Photo ───────────────────────────────────────────── */
+/* Foto de Perfil */
 .photo {
   display: flex;
   justify-content: center;
@@ -135,7 +146,7 @@ span:hover {
     var(--shadow-accent);
 }
 
-/* ─── CV Button ───────────────────────────────────────────────── */
+/* ─── Botón de Descarga de CV ────────────────────────────────── */
 .cv-download {
   max-width: var(--content-max-width);
   margin: var(--space-md) auto 0;
@@ -153,6 +164,7 @@ span:hover {
   font-size: 1.5rem;
   font-weight: 600;
   color: var(--text-primary);
+  /* Gradiente glassmorphism */
   background: linear-gradient(135deg, rgba(38, 39, 90, 0), rgba(30, 41, 59, 0.95));
   border: 1px solid rgba(99, 102, 241, 0.3);
   border-radius: var(--radius-pill);
@@ -174,11 +186,10 @@ span:hover {
   border-color: rgba(99, 102, 241, 0.6);
 }
 
-/* ─── About Section ───────────────────────────────────────────── */
+/* ─── Sección About (Sobre mí) ───────────────────────────────── */
 .about {
   max-width: var(--content-max-width);
   margin: var(--space-3xl) auto 5rem;
-  /* 2rem de separación hacia Proyectos */
   padding: var(--space-xl);
   text-align: center;
   background: transparent;
@@ -195,6 +206,7 @@ span:hover {
   position: relative;
 }
 
+/* Línea decorativa central bajo el título */
 .about h2::after {
   content: '';
   position: absolute;
@@ -215,15 +227,28 @@ span:hover {
   color: var(--text-secondary);
 }
 
-/* ─── Footer ──────────────────────────────────────────────────── */
+/* Contenedor del correo en la sección About (Solo móvil) */
+.about-contact {
+  margin-top: var(--space-xl);
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+/* Ajuste del ancho del pill de contacto para centrado en móvil */
+.about-contact .contact-sidebar {
+  width: auto;
+  max-width: 100%;
+}
+
+/* ─── Footer (Pie de página) ─────────────────────────────────── */
 .home-footer {
   max-width: var(--content-max-width);
   margin: var(--space-2xl) auto 0;
   position: relative;
-  /* necesario para el ::after */
 }
 
-/* Línea de acento en la parte INFERIOR con gradiente */
+/* Línea de acento inferior con gradiente animado visualmente */
 .home-footer::after {
   content: '';
   display: block;
@@ -237,7 +262,6 @@ span:hover {
       transparent 100%);
 }
 
-/* Contenido interno con padding */
 .home-footer-inner {
   padding: var(--space-xl) var(--space-xl) var(--space-lg);
   display: flex;
@@ -246,7 +270,7 @@ span:hover {
   gap: var(--space-md);
 }
 
-/* Bloque superior: nombre + separador + año */
+/* Marca del Footer (Nombre + Año) */
 .home-footer-brand {
   display: flex;
   align-items: center;
@@ -272,7 +296,6 @@ span:hover {
   letter-spacing: 0.05em;
 }
 
-/* Frase/tagline */
 .home-footer-tagline {
   font-family: var(--font-sans);
   font-size: 0.82rem;
@@ -281,7 +304,7 @@ span:hover {
   line-height: 1.5;
 }
 
-/* Divider sutil */
+/* Separador visual sutil */
 .home-footer-divider {
   width: 2rem;
   height: 1px;
@@ -289,7 +312,7 @@ span:hover {
   border-radius: var(--radius-pill);
 }
 
-/* Badge tecnología */
+/* Badge de Tecnología (React) */
 .home-footer-badge {
   display: flex;
   align-items: center;
@@ -311,7 +334,6 @@ span:hover {
   border-color: rgba(99, 102, 241, 0.4);
 }
 
-/* Ícono de React: mismo tamaño que el font-size del badge */
 .home-footer-react-icon {
   width: 0.85rem;
   height: 0.85rem;
@@ -329,9 +351,25 @@ span:hover {
   flex-shrink: 0;
 }
 
-/* ─── Mobile ──────────────────────────────────────────────────── */
+/* Ajustes Responsivos para móviles */
 @media (max-width: 767px) {
+  .home-container,
+  .home-right {
+    flex-direction: column-reverse; /* Foto arriba, texto abajo */
+    text-align: center;
+    gap: var(--space-lg);
+  }
+
+  .home-right h1 {
+    margin: 0 auto;
+  }
+
+  .professions {
+    margin: 0 auto;
+  }
+
   .home-footer {
+    /* Espacio para que la bottom nav no tape el footer */
     margin-bottom: calc(var(--mobile-nav-h) + var(--space-md));
   }
 
@@ -340,12 +378,11 @@ span:hover {
   }
 }
 
-/* ─── Scroll animation ────────────────────────────────────────── */
+/* ─── Animación del Carrusel (Infinite Scroll) ────────────────── */
 @keyframes scroll {
   from {
     transform: translateX(0);
   }
-
   to {
     transform: translateX(-50%);
   }

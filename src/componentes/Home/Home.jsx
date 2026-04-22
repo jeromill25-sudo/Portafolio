@@ -15,6 +15,8 @@ import Pet from '../Pet/Pet';
 import ScrollProgress from '../ScrollProgress/ScrollProgress';
 // Ícono oficial de React para el footer
 import { FaReact } from 'react-icons/fa';
+// Componente de correo electrónico
+import Contact from '../Contact/Contact';
 
 
 /**
@@ -29,7 +31,7 @@ const Home = () => {
 
             {/* ── HERO: nombre, carrusel de profesiones y foto de perfil ── */}
             <div className="home-container">
-                <div className="home-rigth">
+                <div className="home-right">
 
                     {/* Bloque de texto: nombre + carrusel + descripción */}
                     <div className='home-2container'>
@@ -68,6 +70,10 @@ const Home = () => {
                 <p>
                     Soy Jeromill Romero, un programador Junior e Ingeniero de Sistemas, me gusta trabajar en equipo, crear paginas web modernas, ayudar a resolver problemas y estudiar programacion. 
                 </p>
+                {/* Correo de contacto visible solo en mobile */}
+                <div className="about-contact">
+                    <Contact />
+                </div>
             </div>
 
             {/* ── BARRA LATERAL DE NAVEGACIÓN (fixed, no fluye con el scroll) ── */}
