@@ -50,7 +50,7 @@ const Home = () => {
 
                     {/* Foto de perfil circular con efecto hover */}
                     <div className='photo'>
-                        <img src='public/profile.jpeg' alt="Foto de perfil de Jeromill Romero" />
+                        <img src='/profile.jpeg' alt="Foto de perfil de Jeromill Romero" />
                     </div>
                 </div>
             </div>
