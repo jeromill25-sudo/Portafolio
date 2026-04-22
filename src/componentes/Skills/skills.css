@@ -149,8 +149,8 @@
   }
   
   /* Reducimos el desplazamiento a 2.2rem para evitar que se salgan de la pantalla en móviles angostos */
-  .skills-triangle .skill:nth-child(4) { transform: translateX(-2.9rem); }
-  .skills-triangle .skill:nth-child(5) { transform: translateX(2.9rem); }
+  .skills-triangle .skill:nth-child(4) { transform: translateX(-3.2rem); }
+  .skills-triangle .skill:nth-child(5) { transform: translateX(3.2rem); }
   
   /* Ajuste de hover para móviles */
   .skills-triangle .skill:nth-child(4):hover { transform: translateX(-2.2rem) translateY(-0.4rem) scale(1.06); }
