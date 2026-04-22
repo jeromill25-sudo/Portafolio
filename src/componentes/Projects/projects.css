@@ -1,24 +1,55 @@
+/* ─── Projects Container ──────────────────────────────────────────── */
 .proyects-container {
-    max-width: 60rem;
-    margin: 3rem auto;
-    margin-top: 9rem;
-    padding: 2rem;
-
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
+  max-width: var(--content-max-width);
+  margin: 0 auto;
+  padding: var(--space-xl) var(--space-xl) var(--space-2xl);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xl);
 }
 
-  /* TITULO */
+/* Title */
 .proyects-container .titulo {
-    text-align: center;
-    font-size: 2rem;
-    border-bottom: solid;
+  text-align: center;
+  font-family: var(--font-sans);
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--border-subtle);
+  position: relative;
 }
 
-  /* GRID DE TARJETAS 🔥 */
+.proyects-container .titulo::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 4rem;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--accent), transparent);
+  border-radius: var(--radius-pill);
+}
+
+/* ─── Grid — Mobile First ─────────────────────────────────────────── */
+/* Mobile: 1 column */
 .proyects-container .proyects {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
-    gap: 1.5rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+}
+
+/* Tablet ≥ 600px: 2 columns */
+@media (min-width: 600px) {
+  .proyects-container .proyects {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Desktop ≥ 1024px: 3 columns */
+@media (min-width: 1024px) {
+  .proyects-container .proyects {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }

@@ -4,6 +4,7 @@ import Projects from '../Projects/Projects';
 const professions = ["Web Developer", "Problem Solver", "Creator"];
 import Skills from '../Skills/Skills';
 import Pet from '../Pet/Pet';
+import ScrollProgress from '../ScrollProgress/ScrollProgress';
 
 
 const Home = () => {
@@ -51,11 +52,12 @@ const Home = () => {
                 <p className="home-footer-text">
                     © 2026 Jeromill Romero
                     <span className="home-footer-sep" aria-hidden="true">
-                        ||
+                        |
                     </span>
                     Creado con React 🚀
                 </p>
             </footer>
+            <ScrollProgress />
         </div>
         
     );

@@ -1,66 +1,64 @@
-/* Misma posición: panel bajo el nav (ancho lo defines aquí) */
+/* ─── Contact Email — Pill Style ─────────────────────────────────── */
 .contact-sidebar {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 18rem;
-  box-sizing: border-box;
-  padding: 1.5rem 1rem;
+  width: 100%;
 }
 
-/* Estilo igual al botón de descarga CV (.cv-button en home.css) */
 .contact-mail-link {
   display: flex;
-  flex-direction: row;
   align-items: center;
-  gap: 0.6rem;
+  gap: 0.5rem;
+
   width: 100%;
-  max-width: 100%;
-  min-height: auto;
-  padding: 0.75rem 1.4rem;
-  box-sizing: border-box;
-  margin: 0;
+  padding: 0.55rem 0.85rem;
+  border-radius: var(--radius-pill);
+
+  background: rgba(99, 102, 241, 0.08);
+  border: 1px solid rgba(99, 102, 241, 0.2);
+
   text-decoration: none;
-  color: #e2e8f0;
-  font-size: 1rem;
-  font-weight: 700;
-  font-family: 'Courier New', Courier, monospace;
-  background: linear-gradient(135deg, rgba(38, 39, 90, 0), rgba(30, 41, 59, 0.95));
-  border: 0.1rem solid rgba(255, 255, 255, 0.2);
-  border-radius: 0.8rem;
-  cursor: pointer;
-  backdrop-filter: blur(8px);
-  box-shadow: 0 0.5rem 1.6rem rgba(64, 4, 166, 0.45);
+  color: var(--text-muted);
+
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+
   transition:
-    transform 0.3s ease,
-    box-shadow 0.3s ease,
-    background 0.3s ease,
-    font-size 0.3s ease;
-  overflow-wrap: anywhere;
-  word-break: normal;
-  line-height: 1.25;
+    background var(--transition-fast),
+    border-color var(--transition-fast),
+    color var(--transition-fast),
+    box-shadow var(--transition-fast);
+
+  overflow: hidden;
 }
 
 .contact-mail-link:hover {
-  transform: translateY(-0.2rem);
-  background: linear-gradient(135deg, #6365f183, #4438cab4);
-  box-shadow: 0 0.7rem 1.8rem rgba(89, 6, 244, 0.6);
-  /* Misma idea que .cv-button:hover (texto un poco más pequeño) */
-  font-size: 0.9rem;
+  background: rgba(99, 102, 241, 0.18);
+  border-color: rgba(99, 102, 241, 0.5);
+  color: var(--accent-light);
+  box-shadow: 0 0 14px rgba(99, 102, 241, 0.2);
 }
 
 .contact-mail-link:active {
-  transform: translateY(-0.1rem);
+  transform: scale(0.98);
 }
 
 .contact-mail-icon {
   flex-shrink: 0;
-  width: 1.35rem;
-  height: 1.35rem;
-  color: inherit;
+  width: 0.95rem;
+  height: 0.95rem;
+  color: var(--accent);
+  transition: color var(--transition-fast);
+}
+
+.contact-mail-link:hover .contact-mail-icon {
+  color: var(--accent-light);
 }
 
 .contact-mail-text {
   flex: 1 1 auto;
   min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }

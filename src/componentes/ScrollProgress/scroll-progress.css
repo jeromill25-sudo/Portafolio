@@ -1,0 +1,70 @@
+/* ─── Scroll Progress Bar ─────────────────────────────────────────── */
+/* Visible only on desktop (≥ 768px) */
+
+.scroll-progress {
+  display: none; /* hidden on mobile */
+}
+
+@media (min-width: 768px) {
+  .scroll-progress {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+
+    position: fixed;
+    top: 50%;
+    right: 1.25rem;
+    transform: translateY(-50%);
+    z-index: 20;
+
+    /* Height of the track */
+    height: 60vh;
+  }
+
+  .scroll-progress__track {
+    position: relative;
+    width: 3px;
+    flex: 1;
+    background: rgba(255, 255, 255, 0.07);
+    border-radius: var(--radius-pill);
+    overflow: visible;
+  }
+
+  .scroll-progress__fill {
+    width: 100%;
+    min-height: 0;
+    background: linear-gradient(
+      to bottom,
+      var(--accent-light),
+      var(--accent)
+    );
+    border-radius: var(--radius-pill);
+    transition: height 0.1s linear;
+    box-shadow: 0 0 8px var(--accent-glow);
+  }
+
+  .scroll-progress__indicator {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 10px;
+    height: 10px;
+    background: var(--accent-light);
+    border: 2px solid var(--bg-base);
+    border-radius: 50%;
+    box-shadow: 0 0 10px var(--accent-glow), 0 0 4px var(--accent);
+    transition: top 0.1s linear;
+  }
+
+  .scroll-progress__label {
+    font-family: var(--font-mono);
+    font-size: 0.6rem;
+    font-weight: 700;
+    color: var(--text-muted);
+    letter-spacing: 0.05em;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    user-select: none;
+  }
+}

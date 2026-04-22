@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap');
+
+/* ─── Design Tokens ──────────────────────────────────────────────── */
+:root {
+  /* Layout */
+  --sidebar-width:      15rem;
+  --scrollbar-width:    2.5rem;
+  --content-max-width:  58rem;
+
+  /* Colors */
+  --bg-base:            #0f172a;
+  --bg-surface:         rgba(255, 255, 255, 0.04);
+  --bg-surface-hover:   rgba(255, 255, 255, 0.08);
+  --border-subtle:      rgba(255, 255, 255, 0.08);
+  --border-focus:       rgba(99, 102, 241, 0.6);
+
+  --accent:             #6366f1;
+  --accent-light:       #818cf8;
+  --accent-glow:        rgba(99, 102, 241, 0.35);
+  --accent-glow-strong: rgba(89, 6, 244, 0.65);
+
+  --text-primary:       #e2e8f0;
+  --text-secondary:     #cbd5e1;
+  --text-muted:         #94a3b8;
+
+  /* Typography */
+  --font-sans: 'Inter', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Courier New', monospace;
+
+  /* Spacing */
+  --space-xs:  0.25rem;
+  --space-sm:  0.5rem;
+  --space-md:  1rem;
+  --space-lg:  1.5rem;
+  --space-xl:  2rem;
+  --space-2xl: 3rem;
+  --space-3xl: 5rem;
+
+  /* Radii */
+  --radius-sm:   0.5rem;
+  --radius-md:   0.875rem;
+  --radius-lg:   1.25rem;
+  --radius-xl:   1.75rem;
+  --radius-pill: 999px;
+
+  /* Shadows */
+  --shadow-sm:     0 0.25rem 0.75rem rgba(0, 0, 0, 0.25);
+  --shadow-md:     0 0.5rem 1.5rem rgba(0, 0, 0, 0.35);
+  --shadow-accent: 0 0.5rem 1.8rem var(--accent-glow-strong);
+
+  /* Transitions */
+  --transition-fast: 0.2s ease;
+  --transition-base: 0.35s ease;
+
+  /* Mobile bottom nav height */
+  --mobile-nav-h: 4rem;
+}
+
+/* ─── Global Reset ───────────────────────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg-base);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}
