@@ -150,7 +150,7 @@ span:hover {
   padding: 0.7rem 2rem;
   margin-top: 5rem;
   font-family: var(--font-sans);
-  font-size: 1rem;
+  font-size: 1.5rem;
   font-weight: 600;
   color: var(--text-primary);
   background: linear-gradient(135deg, rgba(38, 39, 90, 0), rgba(30, 41, 59, 0.95));
