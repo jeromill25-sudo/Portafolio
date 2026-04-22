@@ -148,6 +148,7 @@ span:hover {
 
 .cv-button {
   padding: 0.7rem 2rem;
+  margin-top: 5rem;
   font-family: var(--font-sans);
   font-size: 1rem;
   font-weight: 600;
@@ -176,13 +177,12 @@ span:hover {
 /* ─── About Section ───────────────────────────────────────────── */
 .about {
   max-width: var(--content-max-width);
-  margin: var(--space-3xl) auto 0;
+  margin: var(--space-3xl) auto 5rem;
+  /* 2rem de separación hacia Proyectos */
   padding: var(--space-xl);
-  border-radius: var(--radius-xl);
   text-align: center;
-  background: var(--bg-surface);
-  border: 1px solid var(--border-subtle);
-  backdrop-filter: blur(8px);
+  background: transparent;
+  border: none;
 }
 
 .about h2 {
@@ -219,33 +219,134 @@ span:hover {
 .home-footer {
   max-width: var(--content-max-width);
   margin: var(--space-2xl) auto 0;
-  padding: var(--space-lg) var(--space-xl);
-  text-align: center;
-  border-top: 1px solid var(--border-subtle);
-  border-radius: 0 0 var(--radius-lg) var(--radius-lg);
-  background: var(--bg-surface);
-  backdrop-filter: blur(8px);
+  position: relative;
+  /* necesario para el ::after */
 }
 
-.home-footer-text {
-  margin: 0;
+/* Línea de acento en la parte INFERIOR con gradiente */
+.home-footer::after {
+  content: '';
+  display: block;
+  height: 2px;
+  margin-top: var(--space-lg);
+  background: linear-gradient(90deg,
+      transparent 0%,
+      var(--accent) 30%,
+      var(--accent-light) 50%,
+      var(--accent) 70%,
+      transparent 100%);
+}
+
+/* Contenido interno con padding */
+.home-footer-inner {
+  padding: var(--space-xl) var(--space-xl) var(--space-lg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-md);
+}
+
+/* Bloque superior: nombre + separador + año */
+.home-footer-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.home-footer-brand-name {
   font-family: var(--font-mono);
-  font-size: 0.85rem;
-  font-weight: 500;
-  color: var(--text-muted);
-  letter-spacing: 0.03em;
-  line-height: 1.6;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  letter-spacing: 0.08em;
 }
 
-.home-footer-sep {
-  display: inline-block;
-  margin: 0 0.75rem;
-  color: var(--accent);
-  opacity: 0.7;
+.home-footer-brand-year {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-pill);
+  padding: 0.15rem 0.55rem;
+  letter-spacing: 0.05em;
+}
+
+/* Frase/tagline */
+.home-footer-tagline {
+  font-family: var(--font-sans);
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  letter-spacing: 0.02em;
+  line-height: 1.5;
+}
+
+/* Divider sutil */
+.home-footer-divider {
+  width: 2rem;
+  height: 1px;
+  background: var(--border-subtle);
+  border-radius: var(--radius-pill);
+}
+
+/* Badge tecnología */
+.home-footer-badge {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--accent-light);
+  background: rgba(99, 102, 241, 0.08);
+  border: 1px solid rgba(99, 102, 241, 0.2);
+  border-radius: var(--radius-pill);
+  padding: 0.3rem 0.8rem;
+  letter-spacing: 0.04em;
+  transition: background var(--transition-fast), border-color var(--transition-fast);
+}
+
+.home-footer-badge:hover {
+  background: rgba(99, 102, 241, 0.15);
+  border-color: rgba(99, 102, 241, 0.4);
+}
+
+/* Ícono de React: mismo tamaño que el font-size del badge */
+.home-footer-react-icon {
+  width: 0.85rem;
+  height: 0.85rem;
+  flex-shrink: 0;
+  color: var(--accent-light);
+  vertical-align: middle;
+}
+
+.home-footer-badge-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 6px var(--accent-glow);
+  flex-shrink: 0;
+}
+
+/* ─── Mobile ──────────────────────────────────────────────────── */
+@media (max-width: 767px) {
+  .home-footer {
+    margin-bottom: calc(var(--mobile-nav-h) + var(--space-md));
+  }
+
+  .home-footer-inner {
+    padding: var(--space-lg) var(--space-md);
+  }
 }
 
 /* ─── Scroll animation ────────────────────────────────────────── */
 @keyframes scroll {
-  from { transform: translateX(0); }
-  to   { transform: translateX(-50%); }
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
 }
