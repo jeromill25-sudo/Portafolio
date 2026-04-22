@@ -133,6 +133,10 @@
 
 /* ─── Ajustes para Móviles ──────────────────────────────────────── */
 @media (max-width: 480px) {
+  .skills-container {
+    overflow-x: hidden; /* Evita scroll lateral por los desplazamientos de la pirámide */
+  }
+
   .skills-triangle {
     gap: 0.60rem;
   }
@@ -144,11 +148,11 @@
     font-size: 0.8rem;
   }
   
-  /* En móvil reducimos el desplazamiento lateral para que quepan en pantalla */
-  .skills-triangle .skill:nth-child(4) { transform: translateX(-4rem); }
-  .skills-triangle .skill:nth-child(5) { transform: translateX(4rem); }
+  /* Reducimos el desplazamiento a 2.2rem para evitar que se salgan de la pantalla en móviles angostos */
+  .skills-triangle .skill:nth-child(4) { transform: translateX(-2.9rem); }
+  .skills-triangle .skill:nth-child(5) { transform: translateX(2.9rem); }
   
   /* Ajuste de hover para móviles */
-  .skills-triangle .skill:nth-child(4):hover { transform: translateX(-1.8rem) translateY(-0.4rem) scale(1.06); }
-  .skills-triangle .skill:nth-child(5):hover { transform: translateX(1.8rem) translateY(-0.4rem) scale(1.06); }
+  .skills-triangle .skill:nth-child(4):hover { transform: translateX(-2.2rem) translateY(-0.4rem) scale(1.06); }
+  .skills-triangle .skill:nth-child(5):hover { transform: translateX(2.2rem) translateY(-0.4rem) scale(1.06); }
 }
