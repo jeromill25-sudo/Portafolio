@@ -12,26 +12,26 @@ import ProjectCard from '../ProjectCard/ProjectCard';
 const projects = [
   {
     img: '/todolist.png',
-    tittle: 'To-do List',
-    description: 'Es una aplicación web de tareas en React con Tailwind CSS y Lucide. ',
+    title: 'To-do List',
+    description: 'Es una aplicación web de tareas en React con Tailwind CSS y Lucide.',
     link: 'https://to-do-list-6cvuujznz-jeromill25-6313s-projects.vercel.app/',
   },
   {
     img: '/profile.jpeg',
-    tittle: 'To-do List',
-    description: 'es la vregaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa',
+    title: 'Proyecto en desarrollo',
+    description: 'Próximamente se añadirá una descripción detallada de este proyecto.',
     link: 'https://github.com',
   },
   {
     img: '/hero.png',
-    tittle: 'To-do List',
-    description: 'es la vregaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa',
+    title: 'Proyecto en desarrollo',
+    description: 'Próximamente se añadirá una descripción detallada de este proyecto.',
     link: 'https://react.dev',
   },
   {
     img: '/vite.svg',
-    tittle: 'To-do List',
-    description: 'es la vregaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa',
+    title: 'Proyecto en desarrollo',
+    description: 'Próximamente se añadirá una descripción detallada de este proyecto.',
     link: 'https://vitejs.dev',
   },
 ];
@@ -46,19 +46,19 @@ const projects = [
 const Projects = () => {
   return (
     // id="project" — no cambiar; el NavBar lo usa como ancla de navegación
-    <div className="proyects-container" id="project">
+    <div className="projects-container" id="project">
 
       {/* Título de sección con underline decorativo en CSS */}
       <h2 className="titulo">Proyectos</h2>
 
       {/* Grid de tarjetas — la cantidad de columnas la controla projects.css */}
-      <div className="proyects">
+      <div className="projects">
         {projects.map((project, index) => (
           // key compuesta para evitar colisiones si hay títulos repetidos
           <ProjectCard
-            key={`${project.tittle}-${index}`}
+            key={`${project.title}-${index}`}
             img={project.img}
-            tittle={project.tittle}
+            title={project.title}
             description={project.description}
             link={project.link}
           />

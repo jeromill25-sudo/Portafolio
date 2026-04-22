@@ -9,11 +9,11 @@ import './project-card.css';
  * Si no se pasa `link`, la tarjeta se renderiza sin enlace.
  *
  * @param {string} img         - Ruta de la imagen del proyecto
- * @param {string} tittle      - Título del proyecto (nota: prop heredada con typo)
+ * @param {string} title       - Título del proyecto
  * @param {string} description - Descripción breve
  * @param {string} [link]      - URL del proyecto (demo, repositorio, etc.)
  */
-const ProjectCard = ({ img, tittle, description, link }) => {
+const ProjectCard = ({ img, title, description, link }) => {
 
   /**
    * Contenido visual interno de la tarjeta.
@@ -21,11 +21,11 @@ const ProjectCard = ({ img, tittle, description, link }) => {
    * evitando duplicar JSX en los dos casos (con link / sin link).
    */
   const inner = (
-    <div className="proyects">
+    <div className="projects">
       {/* Imagen de portada del proyecto */}
-      <img src={img} alt={`Captura del proyecto ${tittle}`} />
+      <img src={img} alt={`Captura del proyecto ${title}`} />
       {/* Título */}
-      <h2>{tittle}</h2>
+      <h2>{title}</h2>
       {/* Descripción breve */}
       <p>{description}</p>
     </div>
@@ -34,13 +34,13 @@ const ProjectCard = ({ img, tittle, description, link }) => {
   // ── Con enlace: envuelve `inner` en un <a> accesible ──
   if (link) {
     return (
-      <div className="proyect-card-container">
+      <div className="project-card-container">
         <a
-          className="proyect-card-link"
+          className="project-card-link"
           href={link}
           target="_blank"                  // Abre en nueva pestaña
           rel="noopener noreferrer"        // Seguridad: evita acceso al window.opener
-          title={`Abrir proyecto: ${tittle}`}
+          title={`Abrir proyecto: ${title}`}
         >
           {inner}
         </a>
@@ -49,7 +49,7 @@ const ProjectCard = ({ img, tittle, description, link }) => {
   }
 
   // ── Sin enlace: renderiza solo la tarjeta visual ──
-  return <div className="proyect-card-container">{inner}</div>;
+  return <div className="project-card-container">{inner}</div>;
 };
 
 export default ProjectCard;

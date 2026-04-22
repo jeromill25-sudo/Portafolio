@@ -1,5 +1,5 @@
 /* ─── Contenedor de Proyectos ─────────────────────────────────────── */
-.proyects-container {
+.projects-container {
   max-width: var(--content-max-width);
   margin: 0 auto;
   padding: var(--space-xl) var(--space-xl) var(--space-2xl);
@@ -9,7 +9,7 @@
 }
 
 /* Título de la sección con subrayado decorativo */
-.proyects-container .titulo {
+.projects-container .titulo {
   text-align: center;
   font-family: var(--font-sans);
   font-size: 2rem;
@@ -20,7 +20,7 @@
   position: relative;
 }
 
-.proyects-container .titulo::after {
+.projects-container .titulo::after {
   content: '';
   position: absolute;
   bottom: -1px;
@@ -34,7 +34,7 @@
 
 /* ─── Grid de Proyectos — Mobile First ────────────────────────────── */
 /* Móvil: 1 columna por defecto */
-.proyects-container .proyects {
+.projects-container .projects {
   display: grid;
   grid-template-columns: 1fr;
   gap: 1.25rem;
@@ -42,14 +42,14 @@
 
 /* Tablet ≥ 600px: Cambia a 2 columnas */
 @media (min-width: 600px) {
-  .proyects-container .proyects {
+  .projects-container .projects {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
 /* Desktop ≥ 1024px: Cambia a 3 columnas para mayor densidad visual */
 @media (min-width: 1024px) {
-  .proyects-container .proyects {
+  .projects-container .projects {
     grid-template-columns: repeat(3, 1fr);
   }
 }

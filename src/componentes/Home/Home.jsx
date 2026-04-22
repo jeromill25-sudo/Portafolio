@@ -66,9 +66,9 @@ const Home = () => {
 
             {/* ── SECCIÓN ABOUT — id requerido por el NavBar para el scroll ── */}
             <div className='about' id='about'>
-                <h2>Sobre mi</h2>
+                <h2>Sobre mí</h2>
                 <p>
-                    Soy Jeromill Romero, un programador Junior e Ingeniero de Sistemas, me gusta trabajar en equipo, crear paginas web modernas, ayudar a resolver problemas y estudiar programacion. 
+                    Soy Jeromill Romero, un programador Junior e Ingeniero de Sistemas, me gusta trabajar en equipo, crear páginas web modernas, ayudar a resolver problemas y estudiar programación. 
                 </p>
                 {/* Correo de contacto visible solo en mobile */}
                 <div className="about-contact">
