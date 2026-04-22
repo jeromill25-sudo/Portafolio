@@ -139,13 +139,15 @@
 
   .skills-triangle {
     gap: 0.60rem;
+    width: 15rem;
+    
   }
   .skills-icon {
-    width: 2.2rem;
+    width: 2rem;
     height: 2rem;
   }
   .skills-triangle .skill p {
-    font-size: 0.8rem;
+    font-size: 0.6rem;
   }
   
   /* Reducimos el desplazamiento a 2.2rem para evitar que se salgan de la pantalla en móviles angostos */
