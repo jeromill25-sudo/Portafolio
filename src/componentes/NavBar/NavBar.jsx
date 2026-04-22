@@ -12,7 +12,7 @@ const NavBar = () => {
           <button type="button">Proyectos</button>
         </a>
         <a href="#skills">
-          <button type="button">Skils</button>
+          <button type="button">Skills</button>
         </a>
       </nav>
       <Contact />
