@@ -63,7 +63,7 @@
 /* Nombre con subrayado decorativo */
 .home-right h1 {
   font-family: var(--font-sans);
-  font-size: clamp(1.75rem, 5vw, 2.8rem); /* Tamaño fluido según el viewport */
+  font-size: clamp(2rem, 5vw, 2.8rem); /* Tamaño fluido según el viewport */
   font-weight: 700;
   color: var(--text-primary);
   border-bottom: 1px solid var(--border-subtle);
@@ -223,7 +223,7 @@ span:hover {
 .about p {
   margin-top: var(--space-lg);
   font-family: var(--font-sans);
-  font-size: 1.05rem;
+  font-size: 1.6rem;
   line-height: 1.7;
   color: var(--text-secondary);
 }
@@ -280,7 +280,7 @@ span:hover {
 
 .home-footer-brand-name {
   font-family: var(--font-mono);
-  font-size: 1.05rem;
+  font-size: 1.55rem;
   font-weight: 700;
   color: var(--text-primary);
   letter-spacing: 0.08em;
@@ -299,7 +299,7 @@ span:hover {
 
 .home-footer-tagline {
   font-family: var(--font-sans);
-  font-size: 0.82rem;
+  font-size: 1rem;
   color: var(--text-muted);
   letter-spacing: 0.02em;
   line-height: 1.5;
