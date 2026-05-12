@@ -59,7 +59,7 @@ const Home = () => {
 
             {/* ── BOTÓN DE DESCARGA DE CV ── */}
             <div className="cv-download">
-                <a className="cv-link" href="/CV_Milly_Romero.pdf" download>
+                <a className="cv-link" href="/Jeromill_Romero_CV.pdf" download>
                     <button className="cv-button">Descargar CV</button>
                 </a>
             </div>
