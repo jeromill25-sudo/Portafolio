@@ -17,14 +17,14 @@ const Contact = () => {
     <div className="contact-sidebar">
       <a
         className="contact-mail-link"
-        href="mailto:mrds10@hotmail.com"       // Abre el cliente de correo del usuario
+        href="mailto:jeromillr@gmail.com"       // Abre el cliente de correo del usuario
         title="Enviar correo a mrds10@hotmail.com"  // Tooltip de accesibilidad
       >
         {/* Ícono de sobre — aria-hidden porque el texto adyacente ya lo describe */}
         <MdEmail className="contact-mail-icon" aria-hidden />
 
         {/* Dirección de email visible; se trunca con ellipsis si no cabe */}
-        <span className="contact-mail-text">mrds10@hotmail.com</span>
+        <span className="contact-mail-text">jeromillr@gmail.com</span>
       </a>
     </div>
   );
