@@ -17,8 +17,8 @@ const Contact = () => {
     <div className="contact-sidebar">
       <a
         className="contact-mail-link"
-        href="mailto:jeromillr@gmail.com"       // Abre el cliente de correo del usuario
-        title="Enviar correo a mrds10@hotmail.com"  // Tooltip de accesibilidad
+        href="https://mail.google.com/mail/?view=cm&fs=1&to=jeromillr@gmail.com&su=Contacto%20desde%20Portafolio%20Web&body=Hola%2C%20Jeromill%20Romero.%20Vi%20tu%20portafolio%20y%20me%20gustar%C3%ADa%20ponerme%20en%20contacto%20contigo%20para%20discutir%20una%20oportunidad%20de%20colaboraci%C3%B3n%20o%20proyecto.%20Quedo%20atento/a%20a%20tus%20comentarios."   // Abre el cliente de correo del usuario   
+        title="Enviar correo a jeromillr@gmail.com"  // Tooltip de accesibilidad
       >
         {/* Ícono de sobre — aria-hidden porque el texto adyacente ya lo describe */}
         <MdEmail className="contact-mail-icon" aria-hidden />
