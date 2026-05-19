@@ -30,16 +30,16 @@ const Home = () => {
         <div className="home">
 
             {/* ── HERO: nombre, carrusel de profesiones y foto de perfil ── */}
-            <div className="home-container">
+            <div className="home-container" id='about'>
                 <div className="home-right">
 
                     {/* Bloque de texto: nombre + carrusel + descripción */}
-                    <div className='home-2container'>
+                    <div className='home-2container' >
                         <h1>Jeromill Romero.</h1>
 
                         {/* Carrusel infinito de etiquetas de profesión */}
                         <div className="professions">
-                            <div className="professions-track">
+                            <div className="professions-track" >
                                 {/* Duplicamos el array para que la animación CSS loop sea seamless */}
                                 {[...professions, ...professions].map((pro, index) => (
                                     <span key={index}>{pro}</span>
@@ -65,7 +65,7 @@ const Home = () => {
             </div>
 
             {/* ── SECCIÓN ABOUT — id requerido por el NavBar para el scroll ── */}
-            <div className='about' id='about'>
+            <div className='about' >
                 <h2>Sobre mí</h2>
                 <p>
                     Soy Jeromill Romero, un programador Junior e Ingeniero de Sistemas, me gusta trabajar en equipo, crear páginas web modernas, ayudar a resolver problemas y estudiar programación. 

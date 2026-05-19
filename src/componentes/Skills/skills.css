@@ -3,6 +3,7 @@
   max-width: var(--content-max-width);
   margin: 0 auto;
   padding: var(--space-xl);
+  padding-top: 9rem;
   border-radius: var(--radius-xl);
   text-align: center;
   color: var(--text-primary);
